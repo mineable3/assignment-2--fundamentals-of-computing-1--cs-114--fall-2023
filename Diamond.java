@@ -27,16 +27,20 @@ public class Diamond {
       System.out.print(" ".repeat(diamondSize) + "*\n");
 
       for (int i = 1; i < diamondSize; i++) {
+        //moving the cursor to the desired column
         System.out.print(" " + " ".repeat(Math.abs((diamondSize) - (2 * i))));
-        System.out.println("*");
+
+        System.out.println("* ".repeat((-Math.abs((2 * i) - diamondSize)) + diamondSize));
       }
 
       System.out.print(" ".repeat(diamondSize) + "*\n");
 
     } else {
       for (int i = 0; i < diamondSize; i++) {
+        //moving the cursor to the desired column
         System.out.print(" ".repeat(Math.abs((diamondSize / 2) - i)));
-        System.out.println("*");
+
+        System.out.println("*".repeat((-Math.abs((2 * i) - diamondSize + 1)) + diamondSize));
       }
     }
   }
