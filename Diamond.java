@@ -24,15 +24,17 @@ public class Diamond {
     }
 
     if (isEven) {
-      //Try appending the top and bottom astrisk seperatly for their special padding
-      for (int i = 0; i < diamondSize + 1; i++) {
-      //padding
-        System.out.print(" ".repeat(Math.abs((diamondSize) - (2 * i))));
+      System.out.print(" ".repeat(diamondSize) + "*\n");
+
+      for (int i = 1; i < diamondSize; i++) {
+        System.out.print(" " + " ".repeat(Math.abs((diamondSize) - (2 * i))));
         System.out.println("*");
       }
+
+      System.out.print(" ".repeat(diamondSize) + "*\n");
+
     } else {
       for (int i = 0; i < diamondSize; i++) {
-      //padding
         System.out.print(" ".repeat(Math.abs((diamondSize / 2) - i)));
         System.out.println("*");
       }
