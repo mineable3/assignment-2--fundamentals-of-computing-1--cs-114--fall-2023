@@ -36,7 +36,7 @@ public class Diamond {
         if (row < (int)(diamondSize / 2)) {
 
           //padding
-          for (int numOfSpaces = (int)((diamondSize) / 2) - row; numOfSpaces > 0; numOfSpaces--) {
+          for (int numOfSpaces = (int)(diamondSize / 2) - row; numOfSpaces > 0; numOfSpaces--) {
             System.out.print("  ");
           }
 
@@ -59,11 +59,11 @@ public class Diamond {
         if (row > (int)(diamondSize / 2)) {
 
           //padding
-          for (int numOfSpaces = (int)((-1) * (diamondSize) / 2) + row; numOfSpaces > 0; numOfSpaces--) {
+          for (int numOfSpaces = (int)(-0.5 * diamondSize) + row; numOfSpaces > 0; numOfSpaces--) {
             System.out.print("  ");
           }
 
-          for (int numOfAstrisks = (int)(diamondSize) - ((2 * (row - (int)(diamondSize / 2)))); numOfAstrisks > 0; numOfAstrisks--) {
+          for (int numOfAstrisks = (int)(2 * diamondSize) - (2 * row); numOfAstrisks > 0; numOfAstrisks--) {
             System.out.print(" *");
           }
 
@@ -72,9 +72,9 @@ public class Diamond {
       };
 
       for (int numOfSpaces = diamondSize; numOfSpaces > 0; numOfSpaces--) {
-          System.out.print(" ");
-        }
-        System.out.println("*");
+        System.out.print(" ");
+      }
+      System.out.println("*");
 
     } else {
       for (int row = 0; row < diamondSize; row++) {
@@ -106,11 +106,11 @@ public class Diamond {
         if (row > (int)(diamondSize / 2)) {
 
           //padding
-          for (int numOfSpaces = (int)((-1) * (diamondSize) / 2) + row; numOfSpaces > 0; numOfSpaces--) {
+          for (int numOfSpaces = (int)(-0.5 * diamondSize) + row; numOfSpaces > 0; numOfSpaces--) {
             System.out.print(" ");
           }
 
-          for (int numOfAstrisks = (int)(diamondSize) - ((2 * (row - (int)(diamondSize / 2)))); numOfAstrisks > 0; numOfAstrisks--) {
+          for (int numOfAstrisks = (int)(2 * diamondSize) - (2 * row) - 1; numOfAstrisks > 0; numOfAstrisks--) {
             System.out.print("*");
           }
 
